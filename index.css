@@ -1,0 +1,170 @@
+/* Estilo base para el body */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  background-color: #2c3e50; /* Fondo oscuro */
+  color: #ecf0f1; /* Texto claro */
+}
+
+/* Estilo para el logo */
+.logo img {
+  width: 100px;
+  height: auto;
+}
+
+/* Estilo para el h2 */
+.h2 {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  margin: 0; /* Eliminar el margen predeterminado */
+  color: #fff; /* Color de texto blanco */
+  text-align: center; /* Centrar el texto */
+  font-size: 50px; /* Tamaño de fuente deseado */
+}
+
+/* Estilo para el contenedor del nav */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #e74c3c; /* Color rojo intenso */
+  padding: 10px 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilo para los enlaces del nav */
+.navbar a {
+  color: #ecf0f1; /* Texto claro */
+  text-decoration: none;
+  padding: 10px 15px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+/* Efecto hover para los enlaces */
+.navbar a:hover {
+  background-color: #c0392b; /* Rojo más oscuro al pasar el mouse */
+  border-radius: 5px;
+}
+
+/* Estilo para el menú desplegable */
+.navbar .dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Estilo para el contenido del menú desplegable */
+.navbar .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff; /* Fondo blanco */
+  min-width: 160px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Estilo para los enlaces en el menú desplegable */
+.navbar .dropdown-content a {
+  color: #333; /* Texto oscuro */
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Efecto hover para los enlaces del menú desplegable */
+.navbar .dropdown-content a:hover {
+  background-color: #f1c40f; /* Color amarillo al pasar el mouse */
+}
+
+/* Mostrar el menú desplegable al pasar el mouse */
+.navbar .dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Estilo base para la tabla */
+.table-report {
+  width: 100%;
+  border-collapse: collapse; /* Combina los bordes de las celdas */
+  margin: 20px 0; /* Margen superior e inferior */
+  font-family: 'Arial', sans-serif; /* Fuente de la tabla */
+}
+
+/* Estilo para el encabezado de la tabla */
+.table-report thead {
+  background-color: #e74c3c; /* Fondo rojo para el encabezado */
+  color: #ffffff; /* Texto blanco */
+}
+
+/* Estilo para las celdas del encabezado */
+.table-report th {
+  padding: 12px; /* Relleno interno */
+  text-align: left; /* Alineación a la izquierda */
+  border-bottom: 2px solid #c0392b; /* Línea inferior */
+}
+
+/* Estilo para las celdas de la tabla */
+.table-report td {
+  padding: 10px; /* Relleno interno */
+  border-bottom: 1px solid #000000; /* Línea inferior */
+  color: #000000;
+  background-color: #ffffff; /* Fondo blanco para las celdas */
+}
+
+/* Estilo para la tabla en dispositivos móviles */
+@media (max-width: 600px) {
+  .table-report,
+  .table-report thead,
+  .table-report tbody,
+  .table-report th,
+  .table-report td,
+  .table-report tr {
+      display: block; /* Mostrar como bloques */
+  }
+
+  .table-report thead {
+      display: none; /* Ocultar encabezados en vista móvil */
+  }
+
+  .table-report tr {
+      margin-bottom: 15px; /* Espaciado entre filas */
+      border: 1px solid #ccc; /* Borde alrededor de las filas */
+  }
+
+  .table-report td {
+      text-align: right; /* Alineación a la derecha */
+      position: relative; /* Posición relativa para etiquetas */
+      padding-left: 50%; /* Espacio a la izquierda */
+  }
+
+  .table-report td::before {
+      content: attr(data-label); /* Etiqueta de contenido antes */
+      position: absolute; /* Posición absoluta */
+      left: 10px; /* Espaciado desde la izquierda */
+      width: calc(50% - 20px); /* Ancho relativo */
+      padding: 5px; /* Relleno */
+      font-weight: bold; /* Texto en negrita */
+      text-align: left; /* Alineación a la izquierda */
+  }
+}
+
+/* Contenedor para la tabla y el botón */
+.table-container {
+  display: flex; /* Utiliza flexbox */
+  flex-direction: column; /* Coloca los elementos en columna */
+  align-items: flex-end; /* Alinear elementos al final (derecha) */
+  margin-bottom: 20px; /* Espacio inferior para separación */
+}
+
+/* Estilo para el botón de exportar */
+.exportar {
+  padding: 10px 15px; /* Relleno del botón */
+  background-color: #e74c3c; /* Fondo rojo */
+  color: #fff; /* Texto blanco */
+  border: none; /* Sin borde */
+  border-radius: 5px; /* Bordes redondeados */
+  cursor: pointer; /* Cambiar cursor al pasar el mouse */
+  transition: background-color 0.3s; /* Transición para el hover */
+}
+
+.exportar:hover {
+  background-color: #c0392b; /* Color más oscuro al pasar el mouse */
+}
